@@ -1,9 +1,10 @@
+// These are virtual URL's, not in the file system
 module.exports = function(app, model) {
-    app.post("/experiments/mongodb/ss/sheet", createSheet);
-    app.get("/experiments/mongodb/ss/sheet", readAllSheet);
-    app.get("/experiments/mongodb/ss/sheet/:id", readOneSheet);
-    app.put("/experiments/mongodb/ss/sheet/:id", updateSheet);
-    app.delete("/experiments/mongodb/ss/sheet/:id", removeSheet);
+    app.post("/ss/sheet", createSheet);
+    app.get("/ss/sheet", readAllSheet);
+    app.get("/ss/sheet/:id", readOneSheet);
+    app.put("/ss/sheet/:id", updateSheet);
+    app.delete("/ss/sheet/:id", removeSheet);
 
     function createSheet(req, res) {
         model

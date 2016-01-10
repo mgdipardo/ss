@@ -10,8 +10,8 @@
                 <!-- $index is an angular feature (the $ indicates so)-->
                 <td>{{$index}}</td>
                 <td>
+                    <!-- ng-change says when the value changes call a function -->
                     <input ng-model="cell.literal"
-                           <!-- ng-change says when the value changes call a function -->
                            ng-change="model.updateCell(model.sheet._id, $index, cell)"
                            tabindex="{{$index}}"
                            class="form-control"/>

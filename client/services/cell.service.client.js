@@ -14,7 +14,7 @@
         function updateCell(sheetId, cellIndex, cell) {
             var deferred = $q.defer();
 
-            $http.put("/experiments/mongodb/ss/sheet/"+sheetId+"/cell/"+cellIndex, cell)
+            $http.put("/ss/sheet/"+sheetId+"/cell/"+cellIndex, cell)
                 .success(function(response){
                     deferred.resolve(response);
                 });
@@ -25,7 +25,7 @@
         function addCell(sheetId, cell) {
             var deferred = $q.defer();
 
-            $http.post("/experiments/mongodb/ss/sheet/"+sheetId+"/cell", cell)
+            $http.post("/ss/sheet/"+sheetId+"/cell", cell)
                 .success(function(response){
                     deferred.resolve(response);
                 });
@@ -36,7 +36,7 @@
         function removeCell(sheetId, cellIndex) {
             var deferred = $q.defer();
 
-            $http.delete("/experiments/mongodb/ss/sheet/"+sheetId+"/cell/"+cellIndex)
+            $http.delete("/ss/sheet/"+sheetId+"/cell/"+cellIndex)
                 .success(function(response){
                     deferred.resolve(response);
                 });

@@ -19,7 +19,7 @@
         function createSheet(sheet) {
             var deferred = $q.defer();
 
-            $http.post("/experiments/mongodb/ss/sheet", sheet)
+            $http.post("/ss/sheet", sheet)
                 .success(function(response){
                     deferred.resolve(response);
                 });
@@ -30,7 +30,7 @@
         function readAllSheet() {
             var deferred = $q.defer();
 
-            $http.get("/experiments/mongodb/ss/sheet")
+            $http.get("/ss/sheet")
                 .success(function(response){
                     deferred.resolve(response);
                 });
@@ -41,7 +41,7 @@
         function readOneSheet(id) {
             var deferred = $q.defer();
 
-            $http.get("/experiments/mongodb/ss/sheet/" + id)
+            $http.get("/ss/sheet/" + id)
                 .success(function(response){
                     deferred.resolve(response);
                 });
@@ -52,7 +52,7 @@
         function updateSheet(id, sheet) {
             var deferred = $q.defer();
 
-            $http.put("/experiments/mongodb/ss/sheet/" + id, sheet)
+            $http.put("/ss/sheet/" + id, sheet)
                 .success(function(response){
                     deferred.resolve(response);
                 });
@@ -63,7 +63,7 @@
         function deleteSheet(id) {
             var deferred = $q.defer();
 
-            $http.delete("/experiments/mongodb/ss/sheet/" + id)
+            $http.delete("/ss/sheet/" + id)
                 .success(function(response){
                     deferred.resolve(response);
                 });
