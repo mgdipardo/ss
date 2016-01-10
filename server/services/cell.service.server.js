@@ -1,8 +1,8 @@
 // These are virtual URL's, not in the file system
 module.exports = function(app, model) {
-    app.post("/ss/sheet/:sheetId/cell", createCell);
-    app.put("/ss/sheet/:sheetId/cell/:cellIndex", updateCell);
-    app.delete("/ss/sheet/:sheetId/cell/:cellIndex", removeCell);
+    app.post("/api/sheet/:sheetId/cell", createCell);
+    app.put("/api/sheet/:sheetId/cell/:cellIndex", updateCell);
+    app.delete("/api/sheet/:sheetId/cell/:cellIndex", removeCell);
 
     // All these are extracting information from the http request and
     // putting them in the model

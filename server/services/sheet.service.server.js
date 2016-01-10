@@ -1,10 +1,10 @@
 // These are virtual URL's, not in the file system
 module.exports = function(app, model) {
-    app.post("/ss/sheet", createSheet);
-    app.get("/ss/sheet", readAllSheet);
-    app.get("/ss/sheet/:id", readOneSheet);
-    app.put("/ss/sheet/:id", updateSheet);
-    app.delete("/ss/sheet/:id", removeSheet);
+    app.post("/api/sheet", createSheet);
+    app.get("/api/sheet", readAllSheet);
+    app.get("/api/sheet/:id", readOneSheet);
+    app.put("/api/sheet/:id", updateSheet);
+    app.delete("/api/sheet/:id", removeSheet);
 
     function createSheet(req, res) {
         model

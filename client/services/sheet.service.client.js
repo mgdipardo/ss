@@ -19,9 +19,11 @@
         function createSheet(sheet) {
             var deferred = $q.defer();
 
-            $http.post("/ss/sheet", sheet)
-                .success(function(response){
-                    deferred.resolve(response);
+            $http.post("/api/sheet", sheet)
+                .then(function(response){
+                    deferred.resolve(response.data);
+                }, function(response){
+                    deferred.reject(response);
                 });
 
             return deferred.promise;
@@ -30,9 +32,11 @@
         function readAllSheet() {
             var deferred = $q.defer();
 
-            $http.get("/ss/sheet")
-                .success(function(response){
-                    deferred.resolve(response);
+            $http.get("/api/sheet")
+                .then(function(response){
+                    deferred.resolve(response.data);
+                }, function(response){
+                    deferred.reject(response);
                 });
 
             return deferred.promise;
@@ -41,9 +45,11 @@
         function readOneSheet(id) {
             var deferred = $q.defer();
 
-            $http.get("/ss/sheet/" + id)
-                .success(function(response){
-                    deferred.resolve(response);
+            $http.get("/api/sheet/" + id)
+                .then(function(response){
+                    deferred.resolve(response.data);
+                }, function(response){
+                    deferred.reject(response);
                 });
 
             return deferred.promise;
@@ -52,9 +58,11 @@
         function updateSheet(id, sheet) {
             var deferred = $q.defer();
 
-            $http.put("/ss/sheet/" + id, sheet)
-                .success(function(response){
-                    deferred.resolve(response);
+            $http.put("/api/sheet/" + id, sheet)
+                .then(function(response){
+                    deferred.resolve(response.data);
+                }, function(response){
+                    deferred.reject(response);
                 });
 
             return deferred.promise;
@@ -63,9 +71,11 @@
         function deleteSheet(id) {
             var deferred = $q.defer();
 
-            $http.delete("/ss/sheet/" + id)
-                .success(function(response){
-                    deferred.resolve(response);
+            $http.delete("/api/sheet/" + id)
+                .then(function(response){
+                    deferred.resolve(response.data);
+                }, function(response){
+                    deferred.reject(response);
                 });
 
             return deferred.promise;
