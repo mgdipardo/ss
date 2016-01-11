@@ -1,3 +1,4 @@
+// client/config.js
 (function(){
     angular
         .module("SheetApp")

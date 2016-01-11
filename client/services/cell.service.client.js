@@ -1,3 +1,4 @@
+// client/services/cell.service.client.js
 (function(){
     angular
         .module("SheetApp")
